@@ -1,43 +1,22 @@
-# include<iostream>
-# include<cstdlib>
-# include <cstring>
-
-using namespace std;
-
-#include "InvitadoDTO.h"
-
-// CONSTRUCTOR:
-InvitadoDTO::InvitadoDTO()
-{
-    //ctor
-}
-
-// SET:
-
-void InvitadoDTO::Setsector(char *sector)
-{
-    strcpy(this->sector,sector);
-}
-
-void InvitadoDTO::Setestado(bool estao)
-{
-    this->estado = estado;
-}
-
-// GET:
-
-char *InvitadoDTO::Getsector()
-{
-    return sector;
-}
-bool InvitadoDTO::Getestado()
-{
-    return estado;
-}
-
-void InvitadoDTO::Cargar(){
-    //PersonaDAL::Cargar();;
-    cout<<"SECTOR: ";
-    cin>>sector;
-}
-
+//#include "InvitadoDTO.h"
+//#include "cstring"
+//#include <iostream>
+//#include "FUNCIONES_FRONT.h"
+//#include "rlutil.h"
+//#include "PersonaDTO.h"
+//#include "InvitadoDTO.h"
+//
+//using namespace std;
+//
+// void InvitadoDTO::setTarea(char *tarea)
+// {
+//     strcpy(Tarea_A_Realizar,tarea);
+// }
+//
+//char * InvitadoDTO::getTarea()
+//{
+//    return Tarea_A_Realizar;
+//}
+//
+//
+//

@@ -1,29 +1,31 @@
-#ifndef INVITADODTO_H_INCLUDED
-#define INVITADODTO_H_INCLUDED
-
-#include "PersonaDTO.h"
-
-class InvitadoDTO : public PersonaDTO
-{
-private:
-    char *sector;
-    bool estado;
-
-public:
-
-    // CONSTRUCTOR:
-    InvitadoDTO();
-
-    // SET:
-    void Setsector(char *sector);
-    void Setestado(bool estado);
-
-    // GET:
-    char *Getsector();
-    bool Getestado();
-
-    // METODOS:
-    void Cargar();
-};
-
-#endif // INVITADODTO_H_INCLUDED
+//#ifndef INVITADODTO_H
+//#define INVITADODTO_H
+//#include <cstdio>
+//#include "cstring"
+//#include "FUNCIONES_FRONT.h"
+//#include "PersonaDTO.h"
+//#include <iostream>
+//
+//
+//
+//
+//class InvitadoDTO : public PersonaDTO
+//{
+//
+//private:
+//    char Tarea_A_Realizar;
+//
+//public:
+//
+//    void setTarea(char *Tarea_A_Realizar);
+//    char * getTarea();
+//
+//    void Cargar();
+//    void Mostrar();
+//
+//
+//
+//
+//};
+//
+//#endif // INVITADODTO_H

@@ -56,6 +56,8 @@
 		<Unit filename="DATA ACCESS LAYER/EmpleadoDAL.h" />
 		<Unit filename="DATA ACCESS LAYER/EspacioDeTrabajoDAL.cpp" />
 		<Unit filename="DATA ACCESS LAYER/EspacioDeTrabajoDAL.h" />
+		<Unit filename="DATA ACCESS LAYER/InvitadoDAL.cpp" />
+		<Unit filename="DATA ACCESS LAYER/InvitadoDAL.h" />
 		<Unit filename="DATA ACCESS LAYER/PersonaDAL.cpp" />
 		<Unit filename="DATA ACCESS LAYER/PersonaDAL.h" />
 		<Unit filename="DATA ACCESS LAYER/ReservasDAL.cpp" />
@@ -64,6 +66,8 @@
 		<Unit filename="DATA TRANSFER OBJECT/EmpleadoDTO.h" />
 		<Unit filename="DATA TRANSFER OBJECT/EspacioDeTrabajoDTO.cpp" />
 		<Unit filename="DATA TRANSFER OBJECT/EspacioDeTrabajoDTO.h" />
+		<Unit filename="DATA TRANSFER OBJECT/InvitadoDTO.cpp" />
+		<Unit filename="DATA TRANSFER OBJECT/InvitadoDTO.h" />
 		<Unit filename="DATA TRANSFER OBJECT/PersonaDTO.cpp" />
 		<Unit filename="DATA TRANSFER OBJECT/PersonaDTO.h" />
 		<Unit filename="DATA TRANSFER OBJECT/ReservaDTO.cpp" />
