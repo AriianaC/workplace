@@ -20,7 +20,8 @@ class Fecha{
         void Mostrar();
         void Cargar();
 
-        Fecha operator++();
+        void operator++();
+        bool operator==(Fecha aux);
 };
 
 

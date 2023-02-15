@@ -1,5 +1,5 @@
 #include "ReservaDTO.h"
-//sets
+
 
 void ReservaDTO::setNumero(int numero)
 {
@@ -70,10 +70,4 @@ Hora ReservaDTO::getHoraEgreso()
 bool ReservaDTO::getEstado()
 {
     return _estado;
-}
-
-
-void ReservaDTO::turno()
-{
-
 }

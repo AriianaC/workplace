@@ -1,6 +1,5 @@
 #ifndef PERSONADTO_H
 #define PERSONADTO_H
-#include "cstring"
 
 #include "Fecha.h"
 
@@ -11,7 +10,6 @@ protected:
     char _nombre[50];
     char _apellido[50];
     char _email[50];
-    char _domicilio[50];
     int _telefono;
 
 public:
@@ -21,19 +19,16 @@ public:
     void setNombre(char *nombre);
     void setApellido(char *apellido);
     void setEmail(char *email);
-    void setDomicilio(char *domicilio);
     void setTelefono(int telefono);
 
     int getDni();
     char * getNombre();
     char * getApellido();
-
     char * getEmail();
-    char * getDomicilio();
     int getTelefono();
 
     void cargar(int dni);
-    void mostrar();
+    void mostrar(int dni);
 };
 
 #endif // PERSONADTO_H

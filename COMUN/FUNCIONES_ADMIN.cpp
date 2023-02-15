@@ -7,6 +7,7 @@ using namespace std;
 #include "rlutil.h"
 #include "FUNCIONES_FRONT.h"
 #include "FUNCIONES_USER.h"
+#include "../MENUS/MENUS.h"
 #include "EmpleadoDAL.h"
 #include "EmpleadoDTO.h"
 #include "EspacioDeTrabajoDTO.h"
@@ -48,10 +49,41 @@ int agregarEmpleado() ///cargar empleado
     return 0;
 }
 
+bool modificarEmpleado()
+{
+    EmpleadoDAL regEmpleado;
+    int dni, nroRegistro;
+    bool modifico = false;
+
+    int cantidad=regEmpleado.getCantidad();
+    EmpleadoDTO* vecEmpleados= new EmpleadoDTO[cantidad];
+
+    regEmpleado.leerTodos(vecEmpleados, cantidad);
+
+    rlutil::  locate (20,8);
+    cout<<"DNI: ";
+    rlutil::  locate (25,8);
+    cin>>dni;
+
+    nroRegistro = regEmpleado.buscar(dni);
+
+    if (nroRegistro==-1)
+    {
+        mostrar_mensaje ("* EL DNI INGRESADO NO EXISTE EN NUESTRA BASE DE DATOS *", 20, 10);
+        system("pause>null");
+    }
+    else
+    {
+        vecEmpleados[nroRegistro].mostrar(dni);
+        getch();
+        modifico = menuModificarDatos(nroRegistro);
+    }
+    return modifico;
+}
+
 bool listarEmpleados()
 {
     EmpleadoDAL regEmpleado;
-    EmpleadoDTO objEmpleado;
 
     bool hayRegistros = false;
     int cantidad=regEmpleado.getCantidad();
@@ -59,17 +91,20 @@ bool listarEmpleados()
 
     if (cantidad > 0)
     {
-        hayRegistros = true;
         regEmpleado.leerTodos(vecEmpleados, cantidad);
-        for( int i=0; i<cantidad; i++)
+        for(int i=0; i<cantidad; i++)
         {
-            system("cls");
-            rectangulo (2, 2, 100, 26);
-            mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
-            mostrar_mensaje ("--------------------", 40, 6);
-            vecEmpleados[i].mostrar();
-            mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
-            getch();
+            if(vecEmpleados[i].getEstado()==true)
+            {
+                hayRegistros = true;
+                system("cls");
+                rectangulo (2, 2, 100, 26);
+                mostrar_mensaje ("LISTADO DE EMPLEADOS", 40, 5);
+                mostrar_mensaje ("--------------------", 40, 6);
+                vecEmpleados[i].mostrar();
+                mostrar_mensaje ("ENTER PARA CONTINUAR..", 60, 25);
+                getch();
+            }
         }
     }
     return hayRegistros;

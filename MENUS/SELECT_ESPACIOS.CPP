@@ -10,12 +10,11 @@ using namespace std;
 #include "Fecha.h"
 
 
-void cuadroSeleccionarEspacio()
+void cuadroSeleccionarEspacio(int dni)
 {
     system("cls");
     rectangulo (2, 2, 100, 20);
 
-    int n=4;
     const char *opciones[] = {"DESK","SALA DE REUNIONES", "ESTACIONAMIENTO", "COMEDOR"};
 
     mostrar_mensaje ("* SELECCIONE UN ESPACIO A RESERVAR *", 30, 5);
@@ -67,22 +66,20 @@ void cuadroSeleccionarEspacio()
             switch(y)
             {
             case 0:      ///DESK
-                 system("cls");
-                cuadroSeleccionDia(y);
+                cuadroSeleccionDia(dni, y);
                 break;
             case 1:       ///SALA DE REUNIONES
-                cuadroSeleccionDia(y);
+                cuadroSeleccionDia(dni, y);
                 break;
             case 2:       ///ESTACIONAMIENTO
-                cuadroSeleccionDia(y);
+                cuadroSeleccionDia(dni, y);
                 break;
             case 3:     ///COMEDOR
-                cuadroSeleccionDia(y);
+                cuadroSeleccionDia(dni, y);
                 break;
             }
         }
     }
-
     while(op!=0);
     system("pause>nul");
 }
